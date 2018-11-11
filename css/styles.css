@@ -1,0 +1,94 @@
+@import url('reset.css');
+
+body {
+	font-family: 'Comfortaa', cursive;
+	padding-right: 20px;
+	padding-left: 20px;
+	color: dimgray;
+}
+
+h1 {
+	font-size: 18px;
+	text-align: center;
+	padding: 5px;
+	margin: 10px;
+}
+
+p {
+	font-size: 14px;
+	padding: 5px;
+	margin: 5px;
+}
+
+#result-string {
+	display: flex;
+	flex-flow: column wrap;
+	width: 700px;
+	heigth: 100px;
+	padding: 5px;
+	margin: 0 auto;
+	background: rgb(250, 128, 114);
+	background: -moz-linear-gradient(60deg, rgb(250, 128, 114) 7%, rgb(255, 160, 122) 57%);
+	background: -webkit-linear-gradient(60deg, rgb(250, 128, 114) 7%, rgb(255, 160, 122) 57%);
+	background: -o-linear-gradient(60deg, rgb(250, 128, 114) 7%, rgb(255, 160, 122) 57%);
+	background: -ms-linear-gradient(60deg, rgb(250, 128, 114) 7%, rgb(255, 160, 122) 57%);
+	background: linear-gradient(150deg, rgb(250, 128, 114) 7%, rgb(255, 160, 122) 57%);
+}
+
+.form {
+	width: 698px;
+	heigth: 105px;
+	margin: 0 auto;
+	background: white;
+}
+
+.form input[type=text] {
+	width: 300px;
+	height: 20px;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid silver;
+	background-color: white;	
+	border-radius: 2px;
+	font-size: 12px
+}
+
+.form input[type=text]:focus {
+	border-color: #ff63476e;
+    outline: none;
+    padding: 2.5px;
+}
+
+.form input[type=text]:hover {
+	border: 1px solid darksalmon;
+	border-radius: 5px;
+}
+
+.form button[type=button] {
+	font-family: 'Comfortaa', cursive;
+	padding: 5px;
+	border: 1px solid silver;
+	background-color: white;
+	border-radius: 2px;
+	color: gray;
+}
+
+.form button[type=button]:hover {
+	border: 1px solid darksalmon;
+	background-color: seashell;
+	border-radius: 5px;
+	color: #252525;	
+}
+
+.form button[type=button]:focus {
+	border: 1px solid darksalmon;
+	border-radius: 5px;
+	outline: none;
+}
+
+.show {
+	height: 20px;
+	margin: 5px;
+	font-size: 16px;
+	color: black;
+}
