@@ -17,14 +17,19 @@ h1 {
 p {
 	font-size: 14px;
 	padding: 5px;
-	margin: 5px;
+	margin: 10px;
+	padding: 5px;
+}
+
+div {
+	margin-bottom: 30px;
 }
 
 #result-string {
 	display: flex;
 	flex-flow: column wrap;
 	width: 700px;
-	heigth: 100px;
+	min-height: 100px;
 	padding: 5px;
 	margin: 0 auto;
 	background: rgb(250, 128, 114);
@@ -37,7 +42,7 @@ p {
 
 .form {
 	width: 698px;
-	heigth: 105px;
+	min-height: 105px;
 	margin: 0 auto;
 	background: white;
 }
@@ -89,6 +94,97 @@ p {
 .show {
 	height: 20px;
 	margin: 5px;
+	padding: 5px;
 	font-size: 16px;
 	color: black;
+}
+
+.comparison {
+	display: block;
+	font-family: 'Comfortaa', cursive;
+	padding: 5px;
+	border: 1px solid silver;
+	background-color: white;
+	border-radius: 2px;
+	color: gray;
+	margin: 0 auto;
+}
+
+.comparison:hover {
+	border: 1px solid darksalmon;
+	background-color: seashell;
+	border-radius: 5px;
+	color: #252525;	
+}
+
+.array-comparison {
+	margin-top: 30px; 
+	margin-bottom: 30px;
+}
+
+.comparison:focus {
+	border: 1px solid darksalmon;
+	border-radius: 5px;
+	outline: none;
+}
+
+.for-border {
+	border: 5px solid peachpuff;
+}
+
+.array-tool{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: 5px;
+	padding: 5px;
+}
+
+.array-one {
+	margin: 5px;
+	padding: 5px;
+}
+
+.array-two {
+	margin: 5px;
+	padding: 5px;
+}
+
+.resut-array {
+	margin: 5px;
+	padding: 5px;
+}
+
+.tool-description {
+	margin: 5px;
+	padding: 5px;
+}
+
+textarea[type=text] {
+	outline: none;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid silver;
+	background-color: white;	
+	border-radius: 2px;
+	font-size: 12px
+}
+
+textarea [type=text]:focus {
+	border-color: #ff63476e;
+    outline: none;
+    padding: 2.5px;
+}
+
+textarea[type=text]:hover {
+	border: 1px solid sandybrown;
+	border-radius: 5px;
+}
+
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
 }

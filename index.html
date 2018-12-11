@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>SEO tools WordStat</title>
+  <title>Tools for SEO</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -11,10 +11,12 @@
 
 </head>
 <body>
-	<header></header>
+	<header>
+		<h1>SEO-tools</h1>
+	</header>
 
 	<div>
-		<h1>Расстановка операторов для WordStat</h1>
+		<h2>Расстановка операторов для WordStat</h2>
 		<p>Введите в форму ниже ключевой запрос. Избегайте пробелов в начале фразы и в конце, лишних пробелов между словами.</p>
 	</div>
 
@@ -26,6 +28,33 @@
 			<p class="show">{{msg}}</p>
 		</div>
 	</div>
+
+	<section class="array-comparison">
+		<div class="tool-description">
+		<h2>Сравнение двух массивов</h2>
+		<p>Description</p>
+		</div>
+
+		<div class="for-border">
+		<div class="array-tool">
+		<div class="array-one">
+			<textarea type="text" placeholder="Первый массив"></textarea>
+		</div>
+
+		<div class="array-two">
+			<textarea type="text" placeholder="Второй массив"></textarea>
+		</div>
+		</div>
+
+		<button type="button" class="comparison">Сравнить</button>
+
+		<div class="resut-array">
+			{{msg}}
+		</div>
+
+		</div>
+	</section>
+
 
 	<div>
 		<p>Спасибо, что воспользовались сервисом!</p>
