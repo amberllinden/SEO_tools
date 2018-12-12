@@ -182,9 +182,24 @@ textarea[type=text]:hover {
 	border-radius: 5px;
 }
 
-footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   width:100%;
+transition-group {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.result-item {
+  display: block;
+}
+
+.result-item p{
+  margin: 5px;
+}
+
+.result-enter-active, .result-leave-active {
+  transition: all 2s;
+}
+.result-enter, .result-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(50px);
 }

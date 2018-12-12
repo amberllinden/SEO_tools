@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script defer src="./scripts/wordProcessor.js"></script>
+  <script defer src="./scripts/arraysComparison.js"></script>
   
 
 </head>
@@ -38,23 +39,26 @@
 		<div class="for-border">
 		<div class="array-tool">
 		<div class="array-one">
-			<textarea type="text" placeholder="Первый массив"></textarea>
+			<textarea v-model.trim="one" type="text" placeholder="Первый массив"></textarea>
 		</div>
 
 		<div class="array-two">
-			<textarea type="text" placeholder="Второй массив"></textarea>
+			<textarea v-model.trim="two" type="text" placeholder="Второй массив"></textarea>
 		</div>
 		</div>
 
-		<button type="button" class="comparison">Сравнить</button>
+		<button type="button" class="comparison" v-on:click="test">Сравнить</button>
 
 		<div class="resut-array">
-			{{msg}}
+			<transition-group name="result" tag="div">
+				<p v-for="result in results" v-bind:key="result" class="result-item">
+					{{ result }}
+				</p>
+			</transition-group>
 		</div>
 
 		</div>
 	</section>
-
 
 	<div>
 		<p>Спасибо, что воспользовались сервисом!</p>
