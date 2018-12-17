@@ -32,8 +32,9 @@
 
 	<section class="array-comparison">
 		<div class="tool-description">
-		<h2>Сравнение двух массивов</h2>
-		<p>Description</p>
+		<h2>Сравнение списков и удаление дубликатов</h2>
+		<p>Инструмент сравнит два списка и выведет единый без дубликатов. Регистр букв в элементе списка не учитывается.</p>
+		<p>Каждый элемент списка вводите с новой строки без запятых и лишних пробелов.</p>
 		</div>
 
 		<div class="for-border">
@@ -47,7 +48,7 @@
 		</div>
 		</div>
 
-		<button type="button" class="comparison" v-on:click="test">Сравнить</button>
+		<button type="button" class="comparison" v-on:click="compare">Сравнить</button>
 
 		<div class="resut-array">
 			<transition-group name="result" tag="div">

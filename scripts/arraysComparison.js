@@ -6,16 +6,17 @@ let arraysComparison = new Vue ({
         results: []
     },
     methods: {
-        test: function () {
-            console.log(this.one);
-            console.log(this.two);
+        compare: function () {
+            let commonString = this.one + '\n' + this.two;
+            let commonArray = commonString.split('\n');    
+            var obj = {};
 
-            let string = this.one + ' ' + this.two;
-            console.log(string);
-            this.results = string.split(' ');
-
+            for (let i = 0; i < commonArray.length; i++) {
+                let string = commonArray[i].toLowerCase();
+                obj[string] = true;
+            }
+            this.results = Object.keys(obj);
         }
-
 
     }
 })
