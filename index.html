@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script defer src="./scripts/wordProcessor.js"></script>
   <script defer src="./scripts/arraysComparison.js"></script>
+  <script defer src="./scripts/countingCharacters.js"></script>
   
 
 </head>
@@ -58,6 +59,26 @@
 			</transition-group>
 		</div>
 
+		</div>
+	</section>
+
+	<section class="counting-characters">
+		<h2>Подсчет количества символов</h2>
+		<p>С помощью инструмента вы подсчитаете количество символов в тексте: полных, а так же без пробелов и переводов строки.</p>
+		<div id="counting-characters">
+			<textarea v-model="textToCount" rows="25" type="text" placeholder="Вставьте текст"></textarea>
+			<button  v-on:click="counting" class="comparison counting">Подсчитать</button>
+		
+		<div class="container">
+			<div>
+				<span class="span-title">всего:</span>
+				<span class="span-text">{{ withSpaces }}</span>
+			</div>
+			<div>
+				<span class="span-title">без пробелов:</span>
+				<span class="span-text">{{ withoutSpaces }}</span>
+			</div>
+		</div>
 		</div>
 	</section>
 
