@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script defer src="./scripts/wordProcessor.js"></script>
   <script defer src="./scripts/arraysComparison.js"></script>
+  <script defer src="./scripts/countingCharacters.js"></script>
   
 
 </head>
@@ -65,17 +66,17 @@
 		<h2>Title</h2>
 		<p>Description</p>
 		<div id="counting-characters">
-			<textarea rows="25" type="text" placeholder="Вставьте текст"></textarea>
-			<button class="comparison">Подсчитать</button>
+			<textarea v-model="textToCount" rows="25" type="text" placeholder="Вставьте текст"></textarea>
+			<button  v-on:click="counting" class="comparison counting">Подсчитать</button>
 		
 		<div class="container">
 			<div>
 				<span class="span-title">с пробелами:</span>
-				<span class="span-text">{{ with-spaces }}</span>
+				<span class="span-text">{{ withSpaces }}</span>
 			</div>
 			<div>
 				<span class="span-title">без пробелов:</span>
-				<span class="span-text">{{ without-spaces }}</span>
+				<span class="span-text">{{ withoutSpaces }}</span>
 			</div>
 		</div>
 		</div>
