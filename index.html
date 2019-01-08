@@ -64,19 +64,20 @@
 	<section class="counting-characters">
 		<h2>Title</h2>
 		<p>Description</p>
-		<div>
-			<textarea name="" id=""></textarea>
-			<button></button>
-		</div>
+		<div id="counting-characters">
+			<textarea rows="25" type="text" placeholder="Вставьте текст"></textarea>
+			<button class="comparison">Подсчитать</button>
+		
 		<div class="container">
 			<div>
-				<h3>count</h3>
-				<span>result</span>
+				<span class="span-title">с пробелами:</span>
+				<span class="span-text">{{ with-spaces }}</span>
 			</div>
 			<div>
-				<h3>count</h3>
-				<span>result</span>
+				<span class="span-title">без пробелов:</span>
+				<span class="span-text">{{ without-spaces }}</span>
 			</div>
+		</div>
 		</div>
 	</section>
 
