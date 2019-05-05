@@ -87,9 +87,9 @@
 		<h2>Tool name</h2>
 		<p>Description</p>
 		<div id="url-counter">
-			<textarea></textarea>
-			<button></button>
-			<div></div>
+			<textarea v-model.trim="textarea" type="text" placeholder="Список url"></textarea>
+			<button type="button" class="" v-on:click="countUrls"></button>
+			<div>{{result}}</div>
 		</div>
 	</section>
 
