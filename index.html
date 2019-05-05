@@ -9,6 +9,7 @@
   <script defer src="./scripts/wordProcessor.js"></script>
   <script defer src="./scripts/arraysComparison.js"></script>
   <script defer src="./scripts/countingCharacters.js"></script>
+	<script defer src="./scripts/urlCounter.js"></script>
   
 
 </head>
@@ -69,21 +70,27 @@
 			<textarea v-model="textToCount" rows="25" type="text" placeholder="Вставьте текст"></textarea>
 			<button  v-on:click="counting" class="comparison counting">Подсчитать</button>
 		
-		<div class="container">
-			<div>
-				<span class="span-title">всего:</span>
-				<span class="span-text">{{ withSpaces }}</span>
+			<div class="container">
+				<div>
+					<span class="span-title">всего:</span>
+					<span class="span-text">{{ withSpaces }}</span>
+				</div>
+				<div>
+					<span class="span-title">без пробелов:</span>
+					<span class="span-text">{{ withoutSpaces }}</span>
+				</div>
 			</div>
-			<div>
-				<span class="span-title">без пробелов:</span>
-				<span class="span-text">{{ withoutSpaces }}</span>
-			</div>
-		</div>
 		</div>
 	</section>
 
 	<section class="url-counter">
-
+		<h2>Tool name</h2>
+		<p>Description</p>
+		<div id="url-counter">
+			<textarea></textarea>
+			<button></button>
+			<div></div>
+		</div>
 	</section>
 
 	<div>
