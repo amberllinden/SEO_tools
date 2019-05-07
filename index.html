@@ -89,7 +89,11 @@
 		<div id="url-counter">
 			<textarea v-model.trim="textarea" type="text" placeholder="Список url"></textarea>
 			<button type="button" class="" v-on:click="countUrls"></button>
-			<div>{{result}}</div>
+			<transition-group name="result" tag="div">
+				<p v-for="result in result" v-bind:key="result" class="result-item">
+					{{ result }}
+				</p>
+			</transition-group>
 		</div>
 	</section>
 
