@@ -2,7 +2,7 @@ let urlCounter = new Vue({
     el: '#url-counter',
     data: {
         textarea: '',
-        result: null
+        result: []
     },
     methods: {
         countUrls: function () {
@@ -13,8 +13,16 @@ let urlCounter = new Vue({
             interimArray.forEach(function (a) {
                 counts[a] = counts[a] + 1 || 1;
             });
-            this.result = Object.assign({}, counts)
-            console.log(this.result);
+
+            let sortableUrl = [];
+            for (var count in counts) {
+                sortableUrl.push([count, counts[count]]);
+            }
+            sortableUrl.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+
+            sortableUrl.map(url => this.result.push(`${url[0]} встречается ${url[1]} раз`))    
         }
     }
 })
