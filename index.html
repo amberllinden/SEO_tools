@@ -9,6 +9,7 @@
   <script defer src="./scripts/wordProcessor.js"></script>
   <script defer src="./scripts/arraysComparison.js"></script>
   <script defer src="./scripts/countingCharacters.js"></script>
+	<script defer src="./scripts/urlCounter.js"></script>
   
 
 </head>
@@ -69,16 +70,31 @@
 			<textarea v-model="textToCount" rows="25" type="text" placeholder="Вставьте текст"></textarea>
 			<button  v-on:click="counting" class="comparison counting">Подсчитать</button>
 		
-		<div class="container">
-			<div>
-				<span class="span-title">всего:</span>
-				<span class="span-text">{{ withSpaces }}</span>
-			</div>
-			<div>
-				<span class="span-title">без пробелов:</span>
-				<span class="span-text">{{ withoutSpaces }}</span>
+			<div class="container">
+				<div>
+					<span class="span-title">всего:</span>
+					<span class="span-text">{{ withSpaces }}</span>
+				</div>
+				<div>
+					<span class="span-title">без пробелов:</span>
+					<span class="span-text">{{ withoutSpaces }}</span>
+				</div>
 			</div>
 		</div>
+	</section>
+
+	<section class="url-counter">
+		<h2>Встречаемость домена в топ-10</h2>
+		<p>С помощью инструмента можно посчитать сколько раз домен встречается в списке. Загрузите выгрузку топ-10 в форму ниже.</p>
+		<p>Каждый элемент списка вводите с новой строки без запятых и лишних пробелов.</p>
+		<div id="url-counter" class="url-counter-container">
+			<textarea v-model.trim="textarea" rows="25" type="text" placeholder="Список url"></textarea>
+			<button type="button" class="comparison counting" v-on:click="countUrls">Подсчитать</button>
+			<transition-group name="result" tag="div">
+				<p v-for="result in result" v-bind:key="result" class="result-item">
+					{{ result }}
+				</p>
+			</transition-group>
 		</div>
 	</section>
 
