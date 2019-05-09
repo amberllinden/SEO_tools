@@ -134,7 +134,7 @@ div {
 	border: 5px solid peachpuff;
 }
 
-.array-tool{
+.array-tool {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -244,4 +244,11 @@ span {
 .span-text {
 	font-size: 15px;
 	color: black;
+}
+
+.url-counter-container {
+	padding: 20px;
+	border: 5px solid sandybrown;
+	display: flex;
+	flex-direction: column;
 }
