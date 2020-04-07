@@ -9,7 +9,8 @@
   <script defer src="./scripts/wordProcessor.js"></script>
   <script defer src="./scripts/arraysComparison.js"></script>
   <script defer src="./scripts/countingCharacters.js"></script>
-	<script defer src="./scripts/urlCounter.js"></script>
+  <script defer src="./scripts/urlCounter.js"></script>
+  <script defer src="./scripts/queryProcessing.js"></script>
   
 
 </head>
@@ -59,7 +60,6 @@
 				</p>
 			</transition-group>
 		</div>
-
 		</div>
 	</section>
 
@@ -95,6 +95,36 @@
 					{{ result }}
 				</p>
 			</transition-group>
+		</div>
+	</section>
+
+	<section class="query-processing">
+		<div class="tool-description">
+			<h2>Дополнение списка ключевых запросов</h2>
+			<p>Поместив в первое поле основные запросы, а во второе - дополнительные, вы получите итоговый список запросов.</p>
+			<p>Например, есть запросы "кирпичи, красные кирпичи, желтые кирпичи" и слова "купить, в москве, недорого", использовав инструмент, вы получите "кирпичи купить, кирпичи в москве, кирпичи недорого" и тд для всех слов в первой группе.</p>
+		</div>
+		
+		<div id="query-processing" class="for-border">
+			<div class="array-tool">
+				<div class="array-one">
+					<textarea rows="10" cols="50" v-model.trim="keywords_one" type="text" placeholder="Запросы для обработки"></textarea>
+				</div>
+		
+				<div class="array-two">
+					<textarea rows="10" cols="50" v-model.trim="keywords_two" type="text" placeholder="Запросы для дополнения"></textarea>
+				</div>
+			</div>
+		
+			<button type="button" class="comparison" v-on:click="getKeywordArray">Получить список</button>
+		
+			<div class="resut-array">
+				<transition-group name="result" tag="div">
+					<p v-for="result in results" v-bind:key="result" class="result-item">
+						{{ result }}
+					</p>
+				</transition-group>
+			</div>
 		</div>
 	</section>
 
